@@ -51,8 +51,7 @@ public class Radio {
             Volume = newVolume - 1;
         } else if (newVolume < 0) {
             Volume = 0;
-        }
-        else if (newVolume > 100) {
+        } else if (newVolume > 100) {
             Volume = 100;
         }
     }

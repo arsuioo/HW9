@@ -40,6 +40,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void getNumberNine() {
         Radio number = new Radio();
@@ -123,6 +124,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevNumberEight() {
         Radio number = new Radio();
@@ -146,6 +148,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevNumberTest() {
         Radio number = new Radio();
@@ -158,7 +161,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-// Звук
+    // Звук
     @Test
     public void nextVolume() {
         Radio volume = new Radio();
@@ -182,6 +185,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void volumeMoreOneHundred() {
         Radio volume = new Radio();
@@ -193,6 +197,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void volumeMoreMinus() {
         Radio volume = new Radio();
