@@ -2,57 +2,62 @@ package ru.netology.servises;
 
 public class Radio {
     private int chanelNumber;
+    private int volume;
 
     public int getChanelNumber() {
         return chanelNumber;
     }
 
+    public int getVolume() {
+        return volume;
+    }
+
     public void setNumber(int newChanelNumber) {
-        if (newChanelNumber < 10 && newChanelNumber > -1) {
-            chanelNumber = newChanelNumber;
+        if (newChanelNumber > 9) {
+            chanelNumber = 9;
+        } else if (newChanelNumber < 0) {
+            chanelNumber = 0;
         } else {
-            return;
+            chanelNumber = newChanelNumber;
         }
     }
 
-    public void setNext(int newChanelNumber) {
-        if (newChanelNumber < 9) {
-            chanelNumber = newChanelNumber + 1;
-        } else if (newChanelNumber == 9) {
+    public void setNext() {
+        chanelNumber++;
+        if (chanelNumber > 9) {
             chanelNumber = 0;
         }
     }
 
-    public void setPrev(int newChanelNumber) {
-        if (newChanelNumber > 0) {
-            chanelNumber = newChanelNumber - 1;
-        } else if (newChanelNumber == 0) {
+
+    public void setPrev() {
+        chanelNumber--;
+        if (chanelNumber < 0) {
             chanelNumber = 9;
         }
     }
 
-
-    private int Volume;
-
-    public int getVolume() {
-        return Volume;
-    }
-
-    public void setMoreVolume(int newVolume) {
-        if (newVolume < 100 && newVolume >= 0) {
-            Volume = newVolume + 1;
-        } else if (newVolume >= 100) {
-            Volume = 100;
+    public void setVolume(int newVolume) {
+        if (newVolume >= 0 && newVolume <= 100) {
+            volume = newVolume;
+        } else if (newVolume > 100) {
+            volume = 100;
         }
     }
 
-    public void setLessVolume(int newVolume) {
-        if (newVolume > 0 && newVolume <= 100) {
-            Volume = newVolume - 1;
-        } else if (newVolume < 0) {
-            Volume = 0;
-        } else if (newVolume > 100) {
-            Volume = 100;
+    public void setMoreVolume() {
+        if (volume < 100) {
+            volume++;
+        } else {
+            volume = 100;
+        }
+    }
+
+    public void setLessVolume() {
+        if (volume > 0) {
+            volume--;
+        } else {
+            volume = 0;
         }
     }
 
