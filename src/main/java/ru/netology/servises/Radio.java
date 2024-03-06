@@ -3,18 +3,29 @@ package ru.netology.servises;
 public class Radio {
     private int chanelNumber;
     private int volume;
+    private int maxChanel;
 
-    public int getChanelNumber() {
+    public Radio() {
+        maxChanel = 10;
+    }
+
+    public Radio(int maxChanel) {
+        this.maxChanel = maxChanel;
+    }
+
+
+    public int getChanelNumber() {//
         return chanelNumber;
     }
+
 
     public int getVolume() {
         return volume;
     }
 
     public void setNumber(int newChanelNumber) {
-        if (newChanelNumber > 9) {
-            chanelNumber = 9;
+        if (newChanelNumber > maxChanel - 1) {
+            chanelNumber = maxChanel - 1;
         } else if (newChanelNumber < 0) {
             chanelNumber = 0;
         } else {
@@ -24,7 +35,7 @@ public class Radio {
 
     public void setNext() {
         chanelNumber++;
-        if (chanelNumber > 9) {
+        if (chanelNumber > maxChanel - 1) {
             chanelNumber = 0;
         }
     }
