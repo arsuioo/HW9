@@ -4,15 +4,14 @@ public class Radio {
     private int volume;
     private int chanelNumber;
 
-    private int maxChanell;
+    private int quantityChanell;
 
-    public Radio() {
-        maxChanell = 10;
+    public Radio() {quantityChanell = 10;
     }
 
-    public Radio(int maxChanell) {
+    public Radio(int quantityChanell) {
 
-        this.maxChanell = maxChanell;
+        this.quantityChanell = quantityChanell;
     }
 
 
@@ -27,8 +26,8 @@ public class Radio {
     }
 
     public void setNumber(int newChanelNumber) {
-        if (newChanelNumber > maxChanell - 1) {
-            chanelNumber = maxChanell - 1;
+        if (newChanelNumber > quantityChanell - 1) {
+            chanelNumber = quantityChanell - 1;
         } else if (newChanelNumber < 0) {
             chanelNumber = 0;
         } else {
@@ -38,7 +37,7 @@ public class Radio {
 
     public void setNext() {
         chanelNumber++;
-        if (chanelNumber > maxChanell - 1) {
+        if (chanelNumber > quantityChanell - 1) {
             chanelNumber = 0;
         }
     }

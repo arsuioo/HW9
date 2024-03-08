@@ -56,18 +56,6 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void nextNumberTwenty() {
-        Radio number = new Radio(20);
-
-        number.setNumber(19);
-        number.setNext();
-
-        int expected = 0;
-        int actual = number.getChanelNumber();
-
-        Assertions.assertEquals(expected, actual);
-    }
 
     @Test
     public void prevNumberOne() {
@@ -81,7 +69,18 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void nextNumberTwenty() {
+        Radio number = new Radio(20);
 
+        number.setNumber(19);
+        number.setNext();
+
+        int expected = 0;
+        int actual = number.getChanelNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
     @Test
     public void prevNumberTwenty() {
         Radio number = new Radio(20);
