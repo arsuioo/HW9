@@ -71,6 +71,32 @@ public class RadioTest {
     }
 
     @Test
+    public void nextNumberTwenty() {
+        Radio number = new Radio(20);
+
+        number.setNumber(19);
+        number.setNext();
+
+        int expected = 0;
+        int actual = number.getChanelNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void prevNumberTwenty() {
+        Radio number = new Radio(20);
+
+        number.setNumber(19);
+        number.setPrev();
+
+        int expected = 18;
+        int actual = number.getChanelNumber();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void prevNumberMinus() {
         Radio number = new Radio();
 
