@@ -6,7 +6,8 @@ public class Radio {
 
     private int quantityChanell;
 
-    public Radio() {quantityChanell = 10;
+    public Radio() {
+        quantityChanell = 10;
     }
 
     public Radio(int quantityChanell) {

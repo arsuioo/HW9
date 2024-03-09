@@ -69,6 +69,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void nextNumberTwenty() {
         Radio number = new Radio(20);
@@ -81,6 +82,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void prevNumberTwenty() {
         Radio number = new Radio(20);
